@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Febry Andhika</title>
+<meta name="description" content="Portfolio Web Developer — Selamat Datang">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Outfit:wght@300;400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- Ikon (sprite) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-gh" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-br" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+</svg>
+
+<!-- Template robot -->
+<template id="robotTpl">
+<svg class="robot" viewBox="0 0 300 400" aria-hidden="true">
+  <defs>
+    <linearGradient id="hd__ID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f8f86"/><stop offset="1" stop-color="#0a2f2f"/></linearGradient>
+    <linearGradient id="bd__ID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f6f68"/><stop offset="1" stop-color="#082524"/></linearGradient>
+    <radialGradient id="fc__ID__" cx=".5" cy=".35" r=".75"><stop offset="0" stop-color="#0c3a3a"/><stop offset="1" stop-color="#03100f"/></radialGradient>
+    <filter id="gl__ID__" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse class="rshadow" cx="150" cy="388" rx="70" ry="9" fill="#000" opacity=".4"/>
+  <g class="rfloat">
+    <path d="M204 248q36 8 40 44" stroke="url(#bd__ID__)" stroke-width="24" stroke-linecap="round" fill="none"/>
+    <circle cx="244" cy="298" r="13" fill="#0d3d3a" stroke="#5eead4" stroke-width="3"/>
+    <path d="M98 236Q98 214 150 214Q202 214 202 236L210 322Q210 350 150 350Q90 350 90 322Z" fill="url(#bd__ID__)"/>
+    <circle class="ring" cx="150" cy="280" r="20" fill="#05201f" stroke="#99f6e4" stroke-width="7" filter="url(#gl__ID__)"/>
+    <g class="rwave">
+      <path d="M100 252Q62 246 48 208" stroke="url(#bd__ID__)" stroke-width="24" stroke-linecap="round" fill="none"/>
+      <circle cx="46" cy="198" r="15" fill="#0d3d3a" stroke="#5eead4" stroke-width="3"/>
+      <path d="M36 184l-4-12M46 182v-14M56 184l5-12" stroke="#5eead4" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <g class="rhead">
+      <ellipse cx="150" cy="140" rx="88" ry="80" fill="url(#hd__ID__)"/>
+      <rect x="50" y="116" width="18" height="48" rx="9" fill="#5eead4"/>
+      <rect x="232" y="116" width="18" height="48" rx="9" fill="#5eead4"/>
+      <ellipse cx="150" cy="142" rx="68" ry="58" fill="url(#fc__ID__)" stroke="#5eead4" stroke-opacity=".7" stroke-width="3"/>
+      <g class="face">
+        <g class="eyes">
+          <g class="eye" style="transform-origin:122px 134px"><ellipse cx="122" cy="134" rx="17" ry="21" fill="#eafcf8" filter="url(#gl__ID__)"/><circle class="pupil" cx="122" cy="134" r="9" fill="#04120f"/><circle class="pupil" cx="125" cy="129" r="3" fill="#fff"/></g>
+          <g class="eye" style="transform-origin:178px 134px"><ellipse cx="178" cy="134" rx="17" ry="21" fill="#eafcf8" filter="url(#gl__ID__)"/><circle class="pupil" cx="178" cy="134" r="9" fill="#04120f"/><circle class="pupil" cx="181" cy="129" r="3" fill="#fff"/></g>
+        </g>
+        <path class="mouth" d="M138 170q12 10 24 0" stroke="#5eead4" stroke-width="5" stroke-linecap="round" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</template>
+
+<div class="bg-grid"></div><div class="spot"></div><div class="cursor-sq" id="csq"></div>
+
+<!-- ===== INTRO ===== -->
+<div id="intro" role="dialog" aria-label="Selamat datang">
+  <div class="intro-dots"></div>
+  <div>
+    <div class="intro-robot" data-robot></div>
+    <h1>FEBRY ANDHIKA VALENT TRIESNAWAN</h1>
+    <span class="intro-url"><b>Selamat Datang</b></span>
+    <div class="intro-soc">
+      <svg class="i"><use href="#i-gh"/></svg><svg class="i"><use href="#i-in"/></svg><svg class="i"><use href="#i-ig"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <ul class="links l">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="#home" class="brand">
+    <span class="logo"></span>
+    <span class="brand-t"><b>FEBRY ANDHIKA VALENT TRIESNAWAN</b><small>LET'S BUILD THE AWESOME EXPERIENCE</small></span>
+  </a>
+  <ul class="links r">
+    <li><a href="#portfolio">Project</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+  <div class="mob" id="mob">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#portfolio">Project</a><a href="#contact">Contact</a>
+  </div>
+  <svg class="hud" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true"><path d="M0 2H430Q450 2 462 13L478 22H722L738 13Q750 2 770 2H1200"/></svg>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <h2><span class="line"><span>WELCOME TO MY</span></span><span class="line"><span>PORTFOLIO</span></span></h2>
+      <div class="role"><span id="role"></span><b>|</b></div>
+      <p class="desc">Mengubah ide menjadi solusi digital yang modern, fungsional, dan mudah digunakan. Berfokus pada pengembangan website dengan memperhatikan kualitas, kenyamanan, serta kebutuhan pengguna untuk menciptakan pengalaman digital yang menarik, efektif, dan memberikan nilai lebih bagi setiap penggunanya.</p>
+       <div class="soc">
+        <a href="https://github.com/febry1922" aria-label="GitHub"><svg class="i"><use href="#i-gh"/></svg></a>
+        <a href="https://instagram.com/triiznwn?exln=MXc5cHJpMXoyeWQ2eg%3D%3D&utm_source=qr" aria-label="Instagram"><svg class="i"><use href="#i-ig"/></svg></a>
+        <a href="https://www.linkedin.com/in/febry-andhika-valent-triesnawan-9b8a8a366?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn"><svg class="i"><use href="#i-in"/></svg></a>
+      </div>
+    </div>
+
+    <!-- Lanyard -->
+    <div class="lanyard-zone" id="zone">
+      <div class="swing" id="swing">
+        <div class="strap"><em>ID CARD · ID CARD · ID CARD · ID CARD</em></div>
+        <div class="clip"></div>
+        <div class="badge" id="badge">
+          <div class="photo">
+            <img class="foto" src="foto.jpeg" alt="Foto profil" onerror="this.remove()">
+            <svg viewBox="0 0 180 340" preserveAspectRatio="xMidYMid slice" aria-label="Foto profil">
+              <rect width="180" height="340" fill="#14b8a6"/>
+              <path d="M0 340c4-80 40-112 90-112s86 32 90 112z" fill="#16202e"/>
+              <rect x="76" y="170" width="28" height="44" rx="12" fill="#e8b48f"/>
+              <ellipse cx="90" cy="130" rx="38" ry="48" fill="#f0c4a2"/>
+              <path d="M50 120c-3-38 20-58 40-58s43 20 40 58c-6-20-18-30-40-30s-34 10-40 30z" fill="#0b0f16"/>
+            </svg>
+          </div>
+          <div class="blob"></div>
+          <div class="vert"><span>  </span></div>
+          <span class="mini-logo"></span>
+          <div class="plate"><b>FEBRY ANDHIKA</b><small>WEB DEVELOPER</small></div>
+          <span class="star">✱</span>
+          <div class="shine"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll"><span>SCROLL</span><i>↓</i></div>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="marquee reveal" aria-hidden="true">
+    <div class="mrow r1"><div class="mtrack" data-m></div></div>
+    <div class="mrow r2"><div class="mtrack" data-m></div></div>
+  </div>
+  <div class="wrap">
+    <p class="tagline reveal">◇ Passionate about coding and creative technology ◇</p>
+    <div class="about-grid">
+      <div class="robot-slot reveal d1" id="aboutRobot" data-robot></div>
+
+      <div class="about-text reveal d2">
+        <div class="hello">HELLO, I'M</div>
+        <h2 class="about-name">FEBRY ANDHIKA<br>VALENT TRIESNAWAN</h2>
+      <p class="bio">Halo! Saya <b>Febry Andhika</b>, seorang Web Developer yang memiliki passion dalam menciptakan pengalaman digital yang modern, menarik, dan berorientasi pada kebutuhan pengguna. Saya senang mengubah ide menjadi website yang memiliki tampilan profesional, fungsional, dan nyaman digunakan. Dengan semangat untuk terus berkembang dan mengeksplorasi teknologi baru, saya berkomitmen untuk menghadirkan solusi digital yang kreatif, inovatif, dan memberikan nilai nyata.</p>  <div class="quote">"Whoever strives shall succeed."</div>
+        <div class="abtn">
+          <button class="btn" type="button" id="downloadCV"><svg class="i"><use href="#i-dl"/></svg>Download CV</button>
+          <a class="btn" href="#portfolio"><svg class="i"><use href="#i-br"/></svg>View Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats reveal d2">
+      <div class="card stat"><strong data-count="3" data-suffix="+">0</strong><span>Proyek Selesai</span></div>
+      <div class="card stat"><strong data-count="3" data-suffix="+">0</strong><span>Tahun Belajar</span></div>
+      <div class="card stat"><strong data-count="4" data-suffix="">0</strong><span>Sertifikat</span></div>
+      <div class="card stat"><strong data-count="100" data-suffix="%">0</strong><span>Semangat</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="center reveal">
+      <h2 class="h2">Portfolio Showcase</h2>
+      <p class="sub">Explore my journey through projects, certifications, and technical expertise.</p>
+    </div>
+
+    <div class="tabs reveal d1" id="tabs">
+      <div class="pill" id="pill"></div>
+      <button class="on" data-t="p1">Projects</button>
+      <button data-t="p2">Certificates</button>
+      <button data-t="p3">Tech Stack</button>
+    </div>
+
+    <div class="panel grid3 on" id="p1">
+      <article class="card proj">
+        <div class="thumb photo">
+          <div class="bar"><i></i><i></i><i></i><span>bumdes-caracas.com · segera online</span></div>
+          <span class="status">SIAP HOSTING</span>
+          <img src="img/bumdes-caracas.jpg" alt="Screenshot Website BUMDes Caracas" loading="lazy" onerror="this.parentElement.classList.remove('photo');this.remove()">
+        </div>
+        <h3>Website BUMDes Caracas</h3>
+        <p>Website profil dan sistem manajemen BUMDes: produk unggulan, bank sampah, unit usaha, laporan keuangan, dan kegiatan harian.</p>
+        <div class="tags"><span>PHP</span><span>MySQL</span><span>Multi-role Admin</span></div>
+        <div class="foot"><span>Belum online</span><button type="button" class="mini" data-proj="bumdes">Details →</button></div>
+      </article>
+
+      <article class="card proj">
+        <div class="thumb photo">
+          <div class="bar"><i></i><i></i><i></i><span>psht-subang.com · segera online</span></div>
+          <span class="status">SIAP HOSTING</span>
+          <img src="img/psht-subang.jpg" alt="Screenshot Website PSHT Subang" loading="lazy" onerror="this.parentElement.classList.remove('photo');this.remove()">
+        </div>
+        <h3>Website PSHT Cabang Subang</h3>
+        <p>Website organisasi dengan Web Application: data warga, pengurus cabang &amp; ranting, dewan cabang, keuangan, informasi, dan dokumentasi.</p>
+        <div class="tags"><span>PHP</span><span>MySQL</span><span>CMS</span><span>Dashboard</span></div>
+        <div class="foot"><span>Belum online</span><button type="button" class="mini" data-proj="psht">Details →</button></div>
+      </article>
+
+      <article class="card proj">
+        <div class="thumb photo">
+          <div class="bar"><i></i><i></i><i></i><span>febry-portfolio · halaman ini</span></div>
+          <span class="status live">LIVE</span>
+          <img src="img/portofolio.png" alt="Screenshot Website Portfolio" loading="lazy" onerror="this.parentElement.classList.remove('photo');this.remove()">
+        </div>
+        <h3>Website Portfolio</h3>
+        <p>Website portfolio pribadi ini: intro animasi, ID card interaktif berbasis fisika, dan fitur komentar pengunjung.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="foot"><span>Halaman ini</span><a href="#home" class="mini">Lihat →</a></div>
+      </article>
+    </div>
+
+    <!-- ===== CERTIFICATES — dengan gambar + lightbox ===== -->
+    <div class="panel grid3" id="p2">
+
+      <!-- 1. AXIOO -->
+      <article class="card cert">
+        <button type="button" class="cert-thumb" data-cert="axioo" aria-label="Lihat sertifikat AXIOO">
+          <span class="cert-badge">PRAKERIN</span>
+          <img src="img/axioo.jpeg" alt="Piagam Penghargaan Prakerin AXIOO" loading="lazy">
+        </button>
+        <div class="cert-info">
+          <h3>Piagam Penghargaan Prakerin</h3>
+          <p>Menyelesaikan Praktik Kerja Industri di PT Tera Data Indonusa (AXIOO) pada September–Desember 2021.</p>
+          <div class="cert-meta">
+            <span class="cert-issuer">PT Tera Data Indonusa · 2021</span>
+            <button type="button" class="certbtn" data-cert="axioo">
+              Lihat <svg><use href="#i-zoom"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. PG Rajawali II -->
+      <article class="card cert">
+        <button type="button" class="cert-thumb" data-cert="rajawali" aria-label="Lihat sertifikat PG Rajawali II">
+          <span class="cert-badge">PKL · 2025</span>
+          <img src="img/bumn.jpeg" alt="Sertifikat Penghargaan PKL PG Rajawali II" loading="lazy">
+        </button>
+        <div class="cert-info">
+          <h3>Sertifikat PKL — PG Rajawali II</h3>
+          <p>Peserta Praktik Kerja Lapangan (PKL) di PT PG Rajawali II Subang, 14 Juli – 14 September 2025.</p>
+          <div class="cert-meta">
+            <span class="cert-issuer">PG Rajawali II · 2025</span>
+            <button type="button" class="certbtn" data-cert="rajawali">
+              Lihat <svg><use href="#i-zoom"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Universitas Mandiri -->
+      <article class="card cert">
+        <button type="button" class="cert-thumb" data-cert="mandiri" aria-label="Lihat sertifikat Workshop Laravel AI">
+          <span class="cert-badge">WORKSHOP · 2025</span>
+          <img src="img/laravel.jpeg" alt="Sertifikat Workshop Boost Skills with Laravel + AI" loading="lazy">
+        </button>
+        <div class="cert-info">
+          <h3>Workshop Boost Skills with Laravel + AI</h3>
+          <p>Menyelesaikan workshop Fakultas Teknik Universitas Mandiri dengan predikat "Baik Sekali", 30 Agustus 2025.</p>
+          <div class="cert-meta">
+            <span class="cert-issuer">Universitas Mandiri · 2025</span>
+            <button type="button" class="certbtn" data-cert="mandiri">
+              Lihat <svg><use href="#i-zoom"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. BNSP -->
+      <article class="card cert">
+        <button type="button" class="cert-thumb" data-cert="bnsp" aria-label="Lihat sertifikat BNSP">
+          <span class="cert-badge">BNSP · 2022</span>
+          <img src="img/tkj.jpeg" alt="Sertifikat Kompetensi BNSP - Junior Network Administrator" loading="lazy">
+        </button>
+        <div class="cert-info">
+          <h3>Sertifikat Kompetensi BNSP</h3>
+          <p>Kompeten pada bidang Rekayasa Jaringan Komputer sebagai <b>Junior Network Administrator</b>. Berlaku 3 tahun.</p>
+          <div class="cert-meta">
+            <span class="cert-issuer">BNSP · 2022</span>
+            <button type="button" class="certbtn" data-cert="bnsp">
+              Lihat <svg><use href="#i-zoom"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ===== TECH STACK ===== -->
+    <div class="panel" id="p3">
+      <div class="tech-stack">
+
+        <div class="tech-card"><span class="num">01</span><div class="info"><b>HTML</b><small>Markup Language</small></div><span class="arrow">→</span></div>
+        <div class="tech-card"><span class="num">02</span><div class="info"><b>CSS</b><small>Styling & Layout</small></div><span class="arrow">→</span></div>
+        <div class="tech-card"><span class="num">03</span><div class="info"><b>JavaScript</b><small>Interactive Logic</small></div><span class="arrow">→</span></div>
+        <div class="tech-card"><span class="num">04</span><div class="info"><b>Laravel</b><small>PHP Framework</small></div><span class="arrow">→</span></div>
+        <div class="tech-card"><span class="num">05</span><div class="info"><b>MySQL</b><small>Database</small></div><span class="arrow">→</span></div>
+        <div class="tech-card"><span class="num">06</span><div class="info"><b>C++</b><small>OOP & Algorithm</small></div><span class="arrow">→</span></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="center reveal">
+      <h2 class="h2">Get In Touch</h2>
+      <p class="sub">Punya ide atau proyek? Kirim pesan, atau tinggalkan komentar di bawah.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="card reveal d1">
+        <form id="mailForm" autocomplete="off">
+          <label class="field"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><input id="mName" placeholder="Your Name" required></label>
+          <label class="field"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><input id="mEmail" type="email" placeholder="Your Email" required></label>
+          <label class="field"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><textarea id="mMsg" placeholder="Your Message" required></textarea></label>
+          <button class="btn send" type="submit">Send Message ➤</button>
+        </form>
+        <div class="connect">
+          <h4>Connect With Me</h4>
+          <div class="socials">
+            <a class="social wide" href="https://www.linkedin.com/in/febry-andhika-valent-triesnawan-9b8a8a366?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener"><span class="ic">in</span><span><b>LinkedIn</b><small>Febry Andhika Valent Triesnawan</small></span></a>
+            <a class="social" href="https://instagram.com/triiznwn?exln=MXc5cHJpMXoyeWQ2eg%3D%3D&utm_source=qr" target="_blank" rel="noopener"><span class="ic">IG</span><span><b>Instagram</b><small>@triiznwn</small></span></a>
+            <a class="social" href="https://www.tiktok.com/@triiznwn" target="_blank" rel="noopener"><span class="ic">TT</span><span><b>TikTok</b><small>@triiznwn</small></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal d2">
+        <form class="cform" id="cForm" autocomplete="off">
+          <label class="field"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><input id="cName" placeholder="Your Name" maxlength="30" required></label>
+          <label class="field"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><textarea id="cText" placeholder="Your Comment" maxlength="280" required></textarea></label>
+          <label class="field upload"><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></svg><span id="upName">Upload Image</span><input id="cImg" type="file" accept="image/*"></label>
+          <button class="btn postbtn" type="submit">Post Comment</button>
+        </form>
+        <div class="cmts" id="cmts"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== MODAL DETAIL PROJECT ===== -->
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="mbox">
+    <button class="mclose" id="mClose" aria-label="Tutup">✕</button>
+    <img class="cover" id="mImg" src="" alt="">
+    <div class="gal" id="mGal"></div>
+    <div class="mbody">
+      <span class="status" id="mStatus" style="position:static;display:inline-block"></span>
+      <h3 id="mTitle"></h3>
+      <div class="role-t" id="mRole"></div>
+      <p id="mDesc"></p>
+      <h4>FITUR UTAMA</h4>
+      <ul id="mFeat"></ul>
+      <h4>TEKNOLOGI</h4>
+      <div class="tags" id="mTech" style="margin:0"></div>
+      <div class="mlinks" id="mLinks"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LIGHTBOX SERTIFIKAT ===== -->
+<div id="certbox" role="dialog" aria-modal="true" aria-label="Preview sertifikat">
+  <div class="certbox-inner">
+    <div class="certbox-bar">
+      <div class="certbox-title">
+        <span id="certboxIcon">🏅</span>
+        <div>
+          <div id="certboxName">Sertifikat</div>
+          <small id="certboxIssuer">Penerbit</small>
+        </div>
+      </div>
+      <div class="certbox-actions">
+        <button class="certbox-btn" id="certboxPrev" aria-label="Sebelumnya">
+          <svg><use href="#i-arrow-l"/></svg> Sebelumnya
+        </button>
+        <button class="certbox-btn" id="certboxNext" aria-label="Berikutnya">
+          Berikutnya <svg><use href="#i-arrow-r"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="certbox-img-wrap">
+      <img id="certboxImg" src="" alt="Sertifikat">
+    </div>
+    <button class="certbox-close" id="certboxClose" aria-label="Tutup">✕</button>
+    <button class="certbox-nav prev" id="certboxNavPrev" aria-label="Sebelumnya"><svg style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#i-arrow-l"/></svg></button>
+    <button class="certbox-nav next" id="certboxNavNext" aria-label="Berikutnya"><svg style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#i-arrow-r"/></svg></button>
+  </div>
+</div>
+
+<footer>© <span id="yr"></span> Febry AVT. &amp; All Rights Reserved.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
